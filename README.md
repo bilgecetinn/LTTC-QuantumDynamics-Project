@@ -3,7 +3,7 @@ Summary: Fortran 90 implementation of quantum wave packet propagation using the 
 
 # Quantum Dynamics: Harmonic Oscillator Wave Packet Propagation
 
-**LTTC Winter School — January 2025 | TCCM Master's Programme**  
+**LTTC Winter School - January 2025 | TCCM Master's Programme**  
 Aspet, Toulouse, France  
 Assignment submitted to: **Prof. Arjan Berger** (LCPQ, Université Paul Sabatier)
 
@@ -29,7 +29,7 @@ The tutorial exercises covered Gaussian wave packet propagation, norm and energy
 
 ## My Contributions
 
-### Task 1 — Hermite Polynomial Recursion
+### Task 1 - Hermite Polynomial Recursion
 Implemented a `hermite_poly` subroutine computing Hermite polynomials Hₙ(y) via the three-term recursion:
 
 ```
@@ -38,14 +38,14 @@ H₁(y) = 2y
 Hₙ(y) = 2y·Hₙ₋₁(y) − 2(n−1)·Hₙ₋₂(y)
 ```
 
-### Task 2 — Harmonic Oscillator Eigenstates
+### Task 2 - Harmonic Oscillator Eigenstates
 Modified `initpsi` to compute eigenstates φₙ(x) for n = 0 to 4 using the analytic formula:
 
 ```
 φₙ(x) = 1/√(2ⁿ n!) · (mω/πℏ)^(1/4) · exp(−mωx²/2ℏ) · Hₙ(√(mω/ℏ) · x)
 ```
 
-### Task 3 — Superposition Wave Packet
+### Task 3 - Superposition Wave Packet
 Built the initial wavefunction as a weighted sum:
 
 ```
@@ -54,10 +54,10 @@ Built the initial wavefunction as a weighted sum:
 
 Coefficients are read from the external `coefficients` file, making it easy to test different configurations without recompiling.
 
-### Task 4 — Normalization
+### Task 4 - Normalization
 Added a normalization block at the end of `initpsi` that computes the norm via discrete integration and rescales Ψ₀(x) to satisfy ∫|Ψ₀(x)|²dx = 1.
 
-### Tasks 5 & 6 — Physical Validation & Case Studies
+### Tasks 5 & 6 - Physical Validation & Case Studies
 Validated the code by propagating a pure eigenstate (only one non-zero coefficient) and confirming that the probability density remains unchanged over time — only a phase factor is acquired, as expected.
 
 Three coefficient configurations were then compared:
@@ -114,6 +114,6 @@ convert -set dispose previous -delay 20 psi*.ps output.gif
 
 ## Academic Context
 
-This work was completed as part of the **Quantum Dynamics module** at the [LTTC Winter School](https://www.lttc.cnrs.fr/), January 2025, held in Aspet, France — an intensive course within the **TCCM European Master's programme** (Theoretical Chemistry and Computational Modelling).
+This work was completed as part of the **Quantum Dynamics module** at the [LTTC Winter School]([https://www.lcpq.ups-tlse.fr/lttc/)/), January 2025, held in Aspet, France - an intensive course within the **TCCM European Master's programme** (Theoretical Chemistry and Computational Modelling).
 
 *Submitted by: Bilge Emek Cetin*
